@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); 
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif; 
+} 
+ 
+body{ 
+    width: 100%; 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+ 
+.container{ 
+    width: 100%; 
+    min-height: 80vh; 
+    position: absolute; 
+    top: 50px; 
+    left: 0; 
+    z-index: 2; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    opacity: 100%; 
+} 
+ 
+.primary__content{ 
+    width: 55%; 
+    height: 100px; 
+    display: flex; 
+    flex-direction: row-reverse; 
+    align-items: center; 
+    justify-content: center; 
+} 
+ 
+.weather__location{ 
+    color: #fff; 
+    font-size: 50px; 
+    font-weight: 300; 
+} 
+ 
+.general__location{ 
+    color: #aaa; 
+    font-size: 30px; 
+    font-weight: 300; 
+    padding-top: 50px; 
+    letter-spacing: 10px; 
+} 
+ 
+.fairy__weather,
+.sunny__weather,
+.rainy__weather,
+.darker__weather
+{ 
+    width: 100%; 
+    height: 200vh; 
+    display: flex; 
+    align-items: center; 
+    position: relative; 
+    top: 0; 
+    left: 0; 
+    overflow: hidden; 
+    z-index: -1; 
+} 
+.fairy__weather{
+    background-color: #0092fb; 
+    /* display: none; */
+}
+.sunny__weather{ 
+    background-color: rgb(16,146,251); 
+    display: none;
+} 
+.rainy__weather{ 
+    background-color: #2a2a2b;
+    background: url('img/8899da2f65fb5a3731ca6c7c29901f11.gif');
+    background-size: contain;
+    display: none;
+
+} 
+
+.darker__weather{ 
+    background-color: rgb(42, 42, 43); 
+    display: none;
+
+} 
+
+#myChart{ 
+    background-color: rgb(16,146,251); 
+    width: 100%; 
+    height: 600px; 
+    margin: 0px auto; 
+    padding-top: 40px; 
+} 
+ 
+.main__temprature{ 
+    color: #000000; 
+    font-size: 90px; 
+    font-weight: 300; 
+} 
+ 
+.fc-sun-f{ 
+    width: 80%; 
+    height: 110vh; 
+    transform: rotateY(180deg) rotateZ(40deg); 
+    position: relative; 
+    top: -100px; 
+    right: -650px; 
+    animation: sunflare 5s infinite linear; 
+    border-radius: 50%; 
+} 
+ 
+@keyframes sunflare{ 
+    0%{ 
+        transform: scaleX(0.8) scaleY(0.8) rotateY(180deg) rotateZ(40deg) translateY(0); 
+    } 
+    50%{ 
+        transform: scaleX(1.1) scaleY(1.07) rotateY(180deg) rotateZ(50deg) translateY(30px); 
+    } 
+    100%{ 
+        transform: scaleX(0.8) scaleY(0.8) rotateY(180deg) rotateZ(40deg) translateY(0px); 
+    } 
+} 
+ 
+.dark{ 
+    width: 200%; 
+} 
+ 
+.fc-n-s{ 
+    width: 400px; 
+    animation: swim 55s infinite linear; 
+} 
+ 
+.fc-b-s{ 
+    animation: swimBig 50s infinite linear; 
+} 
+ 
+.fc-n-a-s{ 
+    width: 600px; 
+    animation: swimDif 8s infinite linear; 
+} 
+ 
+.another{ 
+    width: 600px; 
+    animation: swimAnother 110s infinite linear; 
+} 
+ 
+ 
+.fc-s-s{ 
+    animation: swimBigger 155s infinite linear; 
+} 
+ 
+@keyframes swimBig{ 
+    0%{ 
+        transform: translateX(400px) translateY(200px) rotateY(180deg); 
+        opacity: 0; 
+    } 
+    25%{ 
+        transform: translateX(-200px) translateY(160px) rotateY(180deg); 
+        opacity: 100%; 
+    } 
+    50%{ 
+        transform: translateX(-950px) translateY(120px) rotateY(180deg); 
+        opacity: 20%; 
+    } 
+    75%{ 
+        transform: translateX(400px) translateY(150px) rotateY(180deg); 
+        opacity: 0%; 
+    } 
+    100%{ 
+        transform: translateX(400px) translateY(200px) rotateY(180deg); 
+        opacity: 0; 
+    } 
+} 
+ 
+@keyframes swimBigger{ 
+    0%{ 
+        transform: translateX(150px) translateY(200px); 
+        opacity: 0; 
+    } 
+    25%{ 
+        transform: translateX(-1500px) translateY(00px); 
+        opacity: 100%; 
+    } 
+    50%{ 
+        transform: translateX(-3450px) translateY(0px); 
+        opacity: 0; 
+    } 
+    55%{transform: translateX(0px) translateY(0px); 
+        opacity: 0; 
+    } 
+    100%{ 
+        transform: translateX(150px) translateY(0px); 
+        opacity: 0; 
+    } 
+} 
+ 
+ 
+@keyframes swim{ 
+    0%{ 
+        transform: translateX(150px) translateY(-100px); 
+        opacity: 0; 
+    } 
+    25%{ 
+        transform: translateX(-600px) translateY(-100px); 
+        opacity: 100%; 
+    } 
+    50%{ 
+        transform: translateX(-1250px) translateY(-100px); 
+        opacity: 0; 
+    } 
+    75%{ 
+        transform: translateX(150px) translateY(-100px); 
+        opacity: 0; 
+    } 
+    100%{ 
+        transform: translateX(150px) translateY(-100px); 
+        opacity: 0; 
+    } 
+} 
+ 
+@keyframes swimAnother{ 
+    0%{ 
+        transform: translateX(150px) translateY(100px); 
+        opacity: 0; 
+    } 
+    25%{ 
+        transform: translateX(-600px) translateY(200px); 
+        opacity: 100%; 
+    } 
+    50%{ 
+        transform: translateX(-1250px) translateY(100px); 
+        opacity: 0; 
+    } 
+    75%{ 
+        transform: translateX(150px) translateY(200px); 
+        opacity: 0; 
+    } 
+    100%{ 
+        transform: translateX(150px) translateY(100px); 
+        opacity: 0; 
+    } 
+} 
+ 
+@keyframes swimDif{ 
+    0%{ 
+        transform: translateX(150px) translateY(100px); 
+        opacity: 0; 
+    } 
+    25%{ 
+        transform: translateX(-600px) translateY(200px); 
+        opacity: 100%; 
+    } 
+    50%{ 
+        transform: translateX(-1250px) translateY(100px); 
+        opacity: 0; 
+    } 
+    75%{ 
+        transform: translateX(150px) translateY(200px); 
+        opacity: 0; 
+    } 
+    100%{ 
+        transform: translateX(150px) translateY(100px); 
+        opacity: 0; 
+    } 
+} 
+ 
+.moon{
+    width: 100px;
+    position: absolute;
+    top: 400px;
+    right: 10px;
+    /* z-index: 10; */
+    animation: moon 80s linear  infinite  ;
+}
+@keyframes moon {
+    0%{
+        transform: translate(0,0) ;
+    }
+    50%{
+        transform: translate(-750px, -70px) rotate(255deg);
+    }
+    100%{
+        transform: translate(-1500px, 20px);
+    }
+}
+.weather__icon{ 
+    width: 60px; 
+    height: 60px; 
+} 
+ 
+.all__temprature{ 
+    display: flex; 
+    align-items: center; 
+} 
+ 
+.temp__in{ 
+    margin-left: 40px; 
+} 
+ 
+.in__celsus, .in__kalvin{ 
+    cursor: pointer; 
+    user-select: none; 
+    transition: all 1s; 
+} 
+ 
+.lat-long{ 
+    width: 40%; 
+    display: flex; 
+    align-items: center; 
+    font-size: 24px; 
+    justify-content: space-between; 
+} 
+ 
+.lat-long_mark{ 
+    font-weight: 300; 
+    color: #fff; 
+    padding-right: 20px; 
+} 
+ 
+.local_time{ 
+    font-weight: 300; 
+    color: #fff; 
+    padding: 20px 0px 5px 0px; 
+} 
+ 
+.weather__icon{ 
+    margin-right: 20px; 
+} 
+ 
+.forecast{ 
+    width: 95%; 
+    height: auto; 
+    margin: 30px auto 30px auto; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+} 
+ 
+ 
+.days{ 
+    width: 30%; 
+    height: 500px; 
+    transition: all 1s; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+} 
+ 
+.wrapper{ 
+    width: 90%; 
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    margin-top: 30px; 
+} 
+ 
+.days{ 
+    outline: none; 
+    background-color: rgba(255, 255, 255, 0.301); 
+    backdrop-filter: blur(5px); 
+} 
+ 
+.forecast__date{ 
+    font-size: 20px; 
+    font-weight: 300; 
+    color: #fff; 
+    padding:20px 0px 0px 30px ; 
+} 
+ 
+.sun{ 
+    width: 50%; 
+    height: auto; 
+    display: flex; 
+    align-items: center; 
+    text-align: center; 
+} 
+ 
+.sun > img{ 
+    width: 40px; 
+    margin-right: 20px; 
+} 
+ 
+.sunrise_time, .sunset_time{ 
+    font-size: 15px; 
+    color: #fff; 
+    width: 100%; 
+}
+
+
+#form{
+    display: flex;
+}
+#input{
+    height: 45px;
+    width: 300px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #eee;
+    text-indent: 12px;
+}
+#input::placeholder{
+    color: #555;
+    font-size: larger;
+}
+#input:focus{
+    background-color: transparent;
+}
+input[type="submit"]{
+    height: 45px;
+    width: 80px;
+    background-color:transparent;
+    border:solid #000;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 5px 5px 0;
+    color: #555;
+    font-size: 16px;
+}
+input[type="submit"]:hover{
+    color: #999;
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--  a70ba850a5eb45ddaf591909211707 -->
+    <div class="fairy__weather"> 
+        <img src="https://webstockreview.net/images/cigar-clipart-smoke-trail-18.png" alt="" class="fc-b-s"> 
+        <img src="https://webstockreview.net/images/cigar-clipart-smoke-trail-18.png" alt="" class="fc-n-s"> 
+        <img src="https://webstockreview.net/images/cigar-clipart-smoke-trail-18.png" alt="" class="another"> 
+        <img src="https://i.pinimg.com/originals/19/8d/ae/198daeda14097d45e417e62ff283f10e.png" alt="" class="fc-s-s"> 
+    </div> 
+    <div class="darker__weather"> 
+        <!-- <img src="https://www.vippng.com/png/full/42-422486_download-wallpaper-stratus-realistic-cloud-clipart.png" alt="" class="fc-b-s"> 
+        <img src="https://webstockreview.net/images/cigar-clipart-smoke-trail-18.png" alt="" class="fc-n-s"> 
+        <img src="https://p.kindpng.com/picc/s/41-418824_transparent-dark-clouds-png-png-download.png" alt="" class="another"> 
+        <img src="https://www.nicepng.com/png/full/1-13648_dark-clouds-png-banner-stock-cb-picsart-background.png" alt="" class="fc-s-s"> -->
+        <img src="img/moon.png" class="moon" alt="">
+    </div> 
+    <div class="sunny__weather"> 
+        <img src="https://www.transparentpng.com/thumb/lens-flare/KSx474-oval-yellow-light-lens-hd-flare-sun-rays-nature-natural-light.png" class="fc-sun-f" alt=""> 
+    </div> 
+    <div class="rainy__weather">
+        <!-- <img src="https://i.pinimg.com/originals/88/99/da/8899da2f65fb5a3731ca6c7c29901f11.gif" alt=""> -->
+    </div>
+    
+    <div class="container"> 
+        <form id="form" action="">
+            <input id="input" type="text" value="Namangan" placeholder="City or Country">
+            <input  type="submit">
+        </form>
+        <div class="general_location-time"> 
+            <h2 class="general__location"></h2> 
+        </div> 
+        <h1 class="local_time"></h1> 
+        <div class="primary__content"> 
+            <h2 class="weather__location"></h2> 
+            <div class="primary__content__icon"></div>
+        </div> 
+        <div class="lat-long"> 
+            <div class="lat-con"><h5 class="lat-long_mark">Latitude: <span class="lat"></span></h5></div> 
+            <div class="long-con"><h5 class="lat-long_mark">Longitude: <span class="long"></span></h5></div> 
+            <div class="long-con"><h5 class="lat-long_mark">Region: <span class="reg"></span></h5></div> 
+        </div> 
+        <div class="all__temprature"> 
+            <h1 class="main__temprature"></h1> 
+            <div class="temp__in"> 
+                <h1 class="in__celsus">C&#176</h1> 
+                <h1 class="in__kalvin">K&#176</h1> 
+            </div> 
+        </div> 
+        <div class="forecast"></div> 
+        <canvas id="myChart"></canvas> 
+    </div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
